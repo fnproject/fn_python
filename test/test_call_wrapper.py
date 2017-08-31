@@ -19,11 +19,11 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.app import App
+from swagger_client.models.call_wrapper import CallWrapper
 
 
-class TestApp(unittest.TestCase):
-    """ App unit test stubs """
+class TestCallWrapper(unittest.TestCase):
+    """ CallWrapper unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestApp(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApp(self):
+    def testCallWrapper(self):
         """
-        Test App
+        Test CallWrapper
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.app.App()
+        #model = swagger_client.models.call_wrapper.CallWrapper()
         pass
 
 

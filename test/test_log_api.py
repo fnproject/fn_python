@@ -19,24 +19,32 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.app import App
+from swagger_client.apis.log_api import LogApi
 
 
-class TestApp(unittest.TestCase):
-    """ App unit test stubs """
+class TestLogApi(unittest.TestCase):
+    """ LogApi unit test stubs """
 
     def setUp(self):
-        pass
+        self.api = swagger_client.apis.log_api.LogApi()
 
     def tearDown(self):
         pass
 
-    def testApp(self):
+    def test_apps_app_calls_call_log_delete(self):
         """
-        Test App
+        Test case for apps_app_calls_call_log_delete
+
+        Delete call log entry
         """
-        # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.app.App()
+        pass
+
+    def test_apps_app_calls_call_log_get(self):
+        """
+        Test case for apps_app_calls_call_log_get
+
+        Get call logs
+        """
         pass
 
 
