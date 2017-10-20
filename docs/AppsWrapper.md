@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**next_cursor** | **str** | cursor to send with subsequent request to receive the next page, if non-empty | [optional] 
 **apps** | [**list[App]**](App.md) |  | 
 **error** | [**ErrorBody**](ErrorBody.md) |  | [optional] 
 

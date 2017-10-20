@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **apps_app_routes_get**
-> RoutesWrapper apps_app_routes_get(app)
+> RoutesWrapper apps_app_routes_get(app, image=image, cursor=cursor, per_page=per_page)
 
 Get route list by app name.
 
-This will list routes for a particular app.
+This will list routes for a particular app, returned in alphabetical order.
 
 ### Example 
 ```python
@@ -30,10 +30,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.RoutesApi()
 app = 'app_example' # str | Name of app for this set of routes.
+image = 'image_example' # str | Route image to match, exact. (optional)
+cursor = 'cursor_example' # str | Cursor from previous response.next_cursor to begin results after, if any. (optional)
+per_page = 56 # int | Number of results to return, defaults to 30. Max of 100. (optional)
 
 try: 
     # Get route list by app name.
-    api_response = api_instance.apps_app_routes_get(app)
+    api_response = api_instance.apps_app_routes_get(app, image=image, cursor=cursor, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RoutesApi->apps_app_routes_get: %s\n" % e)
@@ -44,6 +47,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **str**| Name of app for this set of routes. | 
+ **image** | **str**| Route image to match, exact. | [optional] 
+ **cursor** | **str**| Cursor from previous response.next_cursor to begin results after, if any. | [optional] 
+ **per_page** | **int**| Number of results to return, defaults to 30. Max of 100. | [optional] 
 
 ### Return type
 

@@ -157,11 +157,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apps_get**
-> AppsWrapper apps_get()
+> AppsWrapper apps_get(cursor=cursor, per_page=per_page)
 
 Get all app names.
 
-Get a list of all the apps in the system.
+Get a list of all the apps in the system, returned in alphabetical order.
 
 ### Example 
 ```python
@@ -173,17 +173,23 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.AppsApi()
+cursor = 'cursor_example' # str | Cursor from previous response.next_cursor to begin results after, if any. (optional)
+per_page = 56 # int | Number of results to return, defaults to 30. Max of 100. (optional)
 
 try: 
     # Get all app names.
-    api_response = api_instance.apps_get()
+    api_response = api_instance.apps_get(cursor=cursor, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->apps_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cursor** | **str**| Cursor from previous response.next_cursor to begin results after, if any. | [optional] 
+ **per_page** | **int**| Number of results to return, defaults to 30. Max of 100. | [optional] 
 
 ### Return type
 
